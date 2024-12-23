@@ -23,11 +23,11 @@ class Program
 
         Console.WriteLine(root.ToString());
         Console.WriteLine(a.ToString());
-        Console.WriteLine(b.ToString());
-        Console.WriteLine(c.ToString());
-        Console.WriteLine(d.ToString());
-        Console.WriteLine(e.ToString());
-        Console.WriteLine(f.ToString());
+        // Console.WriteLine(b.ToString());
+        // Console.WriteLine(c.ToString());
+        // Console.WriteLine(d.ToString());
+        // Console.WriteLine(e.ToString());
+        // Console.WriteLine(f.ToString());
 
         // NaryNode<string> rootNary = new NaryNode<string>("Root");
         // NaryNode<string> aNary = new NaryNode<string>("A");

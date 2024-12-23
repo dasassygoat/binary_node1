@@ -31,25 +31,30 @@ public class BinaryNode<T>
 
     private string ToString(string spaces)
     {
-        string result = string.Format("{0}:\n", Value);
-        if (LeftChild == null)
+        string result = string.Format("{0}{1}:\n", spaces,Value);
+        
+        if ((RightChild != null) || (LeftChild != null))
         {
-            result += " null ";
-        }
-        else
-        {
-            result += string.Format($"{spaces}{LeftChild.Value}\n");
-        }
+            if (LeftChild == null)
+            {
+                result += string.Format("{0}{1}null\n", spaces,"  ");
+            }
+            else
+            {
+                result += LeftChild.ToString(spaces + "  ");
+            }
 
-        if (RightChild == null)
-        {
-            result += " null ";
-        }
-        else
-        {
-            result += string.Format($"{spaces}{RightChild.Value}\n");
-        }
+            if (RightChild == null)
+            {
+                result += string.Format("{0}{1}null\n", spaces,"  ");
+            }
+            else
+            {
+                result += RightChild.ToString(spaces + "  ");
+            }
 
+        }
         return result;
     }
+    
 }
