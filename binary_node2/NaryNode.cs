@@ -18,10 +18,15 @@ public class NaryNode<T>
 
     public override string ToString()
     {
-        string result = string.Format("{0}:", Value);
+        return ToString("");
+    }
+
+    public string ToString(string space)
+    {
+        string result = string.Format("{0}{1}:\n", space, Value);
         foreach (var s in Children)
         {
-            result += string.Format($" {s.Value} ");
+            result += s.ToString(space + "  ");
         }
         
         return result;
